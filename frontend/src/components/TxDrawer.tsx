@@ -94,8 +94,8 @@ function TxDrawer() {
         left: "50%",
         transform: "translateX(-50%)",
         zIndex: 200,
-        minWidth: "18rem",
-        maxWidth: "calc(100vw - 2rem)",
+        width: "calc(100vw - 2rem)",
+        maxWidth: "26rem",
         background: "var(--color-surface, #fff)",
         border: `1.5px solid ${borderColor(status)}`,
         borderRadius: "0.75rem",
@@ -104,6 +104,7 @@ function TxDrawer() {
         display: "flex",
         alignItems: "flex-start",
         gap: "0.75rem",
+        overflow: "hidden",
       }}
     >
       {/* Icon */}

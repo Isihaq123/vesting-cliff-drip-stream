@@ -76,8 +76,8 @@ function StreamList() {
         {MOCK_STREAMS.map((s) => (
           <li key={s.id} className="stream-card">
             <div className="stream-card-row">
-              <div>
-                <div style={{ fontFamily: "monospace", fontSize: "0.85rem", display: "flex", alignItems: "center", gap: "0.25rem" }}>
+              <div style={{ minWidth: 0 }}>
+                <div style={{ fontFamily: "monospace", fontSize: "0.85rem", wordBreak: "break-all", display: "flex", alignItems: "center", gap: "0.25rem" }}>
                   {s.recipient}
                   <CopyButton text={s.recipient} label="Copy recipient address" />
                 </div>
@@ -85,7 +85,7 @@ function StreamList() {
                   <StatusBadge status={s.status} />
                 </div>
               </div>
-              <div style={{ textAlign: "right", display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "0.4rem" }}>
+              <div style={{ textAlign: "right", flexShrink: 0, display: "flex", flexDirection: "column", alignItems: "flex-end", gap: "0.4rem" }}>
                 <div style={{ fontWeight: 700 }}>
                   {s.claimableAmount.toLocaleString()} {s.token}
                 </div>
